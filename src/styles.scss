@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'normalize.css';
+@import "@fontsource/inter/index.css";
+@import '@fontsource/nunito/400.css';
+
+html {
+  font-family: "Inter", sans-serif;
+}

@@ -1,0 +1,61 @@
+@use 'sass:color';
+
+// Цвета
+$color-primary:   #075095;               // синий
+$color-inactive:  #B3B7BC;               // серый
+$color-border:    rgb(225, 229, 235);    // светло-серый фон/граница
+$color-text:      #01101E;               // основной текст
+
+.bottom-nav {
+  border-top: 1px solid $color-border;
+  padding: 0 16px;
+
+  &__list {
+    gap: 10px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: space-around;
+  }
+
+  &__item {
+    flex: 1;
+
+    &--active .bottom-nav__link {
+      color: $color-primary;
+      font-family: Inter;
+      font-weight: 700;
+    }
+  }
+
+  &__link {
+    font-family: Nunito;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0;
+    color: $color-inactive;
+    text-decoration: none;
+
+    &:hover {
+      color: color.adjust($color-primary, $lightness: -10%);
+    }
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  &__text {
+    margin-top: 0.25rem;
+    line-height: 1;
+    color: inherit;
+  }
+}
