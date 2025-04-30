@@ -2,7 +2,21 @@
 @import 'normalize.css';
 @import "@fontsource/inter/index.css";
 @import '@fontsource/nunito/400.css';
+@import 'swiper/swiper-bundle.min.css';
 
 html {
   font-family: "Inter", sans-serif;
+}
+
+
+.Line{
+   outline: solid 3px green;
+
+  & * {
+    outline: solid 1px red;
+  }
+
+  & > * {
+    outline: solid 2px orange;
+  }
 }

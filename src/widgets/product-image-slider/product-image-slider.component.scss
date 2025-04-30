@@ -1,0 +1,36 @@
+:host {
+  .product-slider {
+    // Размеры буллетов
+    --swiper-pagination-bullet-width: 38px;
+    --swiper-pagination-bullet-height: 2px;
+
+    // Цвета
+    --swiper-pagination-color: #075095; // активный
+    --swiper-pagination-bullet-inactive-color: rgb(225, 229, 235); // неактивный
+    --swiper-pagination-bullet-inactive-opacity: 1;
+
+    // Отступы между буллетами
+    --swiper-pagination-bullet-horizontal-gap: 8px;
+
+    ::ng-deep {
+      .swiper-pagination-bullet{
+        border-radius: 0;
+      }
+
+      .swiper-pagination{
+        bottom: 4px;
+      }
+    }
+  }
+}
+
+.product-slider {
+  width: 100%;
+  height: 300px;
+
+  img {
+       width: 100%;
+        height: 300px;
+       object-fit: cover;
+     }
+}

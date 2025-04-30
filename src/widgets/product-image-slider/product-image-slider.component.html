@@ -1,0 +1,11 @@
+<swiper
+        [slidesPerView]="1"
+        [pagination]="{ clickable: true }"
+        class="product-slider"
+>
+    <ng-template swiperSlide *ngFor="let img of images">
+        <div class="product-slider__slide">
+            <img [src]="img" alt="Фото товара" />
+        </div>
+    </ng-template>
+</swiper>
