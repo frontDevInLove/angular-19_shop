@@ -15,7 +15,7 @@ export class NavigationComponent {
    * Массив навигационных пунктов
    */
   public navItems = [
-    { label: 'Каталог', icon: 'icon-catalog.svg', link: '/' },
+    { label: 'Каталог', icon: 'icon-catalog.svg', link: '/catalog' },
     { label: 'Заказы', icon: 'icon-orders.svg', link: '/orders' },
     { label: 'Новости', icon: 'icon-news.svg', link: '/news' },
     { label: 'Корзина', icon: 'icon-cart.svg', link: '/cart' },

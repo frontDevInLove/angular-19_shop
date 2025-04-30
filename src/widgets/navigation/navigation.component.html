@@ -1,11 +1,7 @@
 <nav class="bottom-nav">
   <ul class="bottom-nav__list">
     @for (item of navItems; track item.link) {
-      <li
-        class="bottom-nav__item"
-        routerLinkActive="bottom-nav__item--active"
-        [routerLinkActiveOptions]="{ exact: true }"
-      >
+      <li class="bottom-nav__item" routerLinkActive="bottom-nav__item--active">
         <a [routerLink]="item.link" class="bottom-nav__link">
           <app-icon
             [icon]="item.icon"
