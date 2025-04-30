@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { InlineSVGModule } from 'ng-inline-svg-2';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { IconComponent } from '../../shared/ui/icon/icon.component';
 
 @Component({
   selector: 'app-navigation',
-  imports: [InlineSVGModule, RouterLink, RouterLinkActive],
+  imports: [InlineSVGModule, RouterLink, RouterLinkActive, IconComponent],
   standalone: true,
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss',

@@ -1,0 +1,11 @@
+* {
+    color: #B3B7BC;
+}
+
+.active{
+    color: #075095;
+
+    ::ng-deep svg {
+        fill: currentColor;
+    }
+}

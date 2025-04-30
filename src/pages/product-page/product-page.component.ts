@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ProductImageSliderComponent } from '../../widgets/product-image-slider/product-image-slider.component';
+import { ProductImagePreviewComponent } from '@widgets/product-image-preview/product-image-preview.component';
 
 @Component({
   selector: 'app-product-page',
   standalone: true,
-  imports: [ProductImageSliderComponent],
+  imports: [ProductImagePreviewComponent],
   templateUrl: './product-page.component.html',
   styleUrl: './product-page.component.scss',
 })
