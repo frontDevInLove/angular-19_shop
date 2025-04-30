@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 
 import { BackButtonComponent } from '@features/back-button/back-button.component';
 import { FavoriteToggleComponent } from '@features/favorite-toggle/favorite-toggle.component';
 import { ProductImageSliderComponent } from '@widgets/product-image-slider/product-image-slider.component';
+import { ProductContextService } from '@pages/product-page/model/product-context.service';
+import { NgIf } from '@angular/common';
+import { NgxSkeletonLoaderComponent } from 'ngx-skeleton-loader';
 
 @Component({
   selector: 'app-product-image-preview',
@@ -10,17 +13,15 @@ import { ProductImageSliderComponent } from '@widgets/product-image-slider/produ
     BackButtonComponent,
     FavoriteToggleComponent,
     ProductImageSliderComponent,
+    NgIf,
+    NgxSkeletonLoaderComponent,
   ],
   standalone: true,
   templateUrl: './product-image-preview.component.html',
   styleUrl: './product-image-preview.component.scss',
 })
 export class ProductImagePreviewComponent {
-  images = [
-    '/sliders/img_1.png',
-    '/sliders/img_2.jpeg',
-    '/sliders/img_3.jpeg',
-    '/sliders/img_4.jpeg',
-    '/sliders/img_4.jpeg',
-  ];
+  private context = inject(ProductContextService);
+
+  readonly images = computed(() => this.context.product()?.images ?? []);
 }

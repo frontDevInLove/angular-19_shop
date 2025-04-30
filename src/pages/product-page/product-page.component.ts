@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductImagePreviewComponent } from '@widgets/product-image-preview/product-image-preview.component';
+import { ActivatedRoute } from '@angular/router';
+import { ProductContextService } from '@pages/product-page/model/product-context.service';
 
 @Component({
   selector: 'app-product-page',
@@ -8,4 +10,14 @@ import { ProductImagePreviewComponent } from '@widgets/product-image-preview/pro
   templateUrl: './product-page.component.html',
   styleUrl: './product-page.component.scss',
 })
-export class ProductPageComponent {}
+export class ProductPageComponent implements OnInit {
+  constructor(
+    private route: ActivatedRoute,
+    private context: ProductContextService,
+  ) {}
+
+  async ngOnInit() {
+    const id = this.route.snapshot.paramMap.get('id') ?? '1';
+    await this.context.getProduct(id);
+  }
+}

@@ -1,10 +1,24 @@
 <div class="preview">
-  <div class="preview__header">
-    <app-back-button />
-    <app-favorite-toggle />
-  </div>
+  <ng-container *ngIf="images().length; else loading">
+    <div class="preview__header">
+      <app-back-button />
+      <app-favorite-toggle />
+    </div>
 
-  <div class="preview__slider">
-    <app-product-image-slider [images]="images" />
-  </div>
+    <div class="preview__slider">
+      <app-product-image-slider [images]="images()" />
+    </div>
+  </ng-container>
 </div>
+
+<ng-template #loading>
+  <ngx-skeleton-loader
+    appearance="circle"
+    [theme]="{
+      'border-radius': '0',
+      height: '300px',
+      width: '100%',
+      margin: '0',
+    }"
+  />
+</ng-template>

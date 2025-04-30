@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { IconComponent } from '@shared/ui/icon/icon.component';
-import { FavoriteService } from './services/favorite.service';
+import { FavoriteService } from '@features/favorite-toggle/model/favorite.service';
 import { NgClass } from '@angular/common';
 
 @Component({
