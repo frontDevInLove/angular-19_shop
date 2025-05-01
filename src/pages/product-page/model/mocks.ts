@@ -28,4 +28,39 @@ export const mockProduct: ProductContext = {
       deliveryDate: '29.04.2025',
     },
   ],
+  specs: [
+    {
+      label: 'Тип ТС',
+      value: 'грузовые автомобили, автобусы, сельхозтехника',
+    },
+    {
+      label: 'Применяемость',
+      value: 'КАМАЗ, ЛИАЗ, CASE с дв. CUMMINS ISBe/ISDe',
+    },
+    {
+      label: 'Марка ТС',
+      value: 'КАМАЗ, ЛИАЗ, CASE',
+    },
+    {
+      label: 'Кросс‑коды',
+      value:
+        'FC6206, WK950/3, 110-16-008, 6127, FF185M, 1457434180, KC28, KF3041',
+    },
+    {
+      label: 'Состав комплекта',
+      value: 'Фильтр очистки топлива: 1 шт.',
+    },
+    {
+      label: 'Модель двигателя',
+      value: 'Cummins ISD 6.7, Cummins ISB 6.7',
+    },
+    {
+      label: 'Марка двигателя',
+      value: 'Cummins Inc.',
+    },
+    {
+      label: 'Доп. информация',
+      value: '–',
+    },
+  ],
 };

@@ -7,6 +7,11 @@ export interface StockInfo {
   deliveryDate: string;
 }
 
+export interface ProductSpecs {
+  label: string;
+  value: string;
+}
+
 export interface ProductContext {
   id: string;
   images: string[];
@@ -17,6 +22,7 @@ export interface ProductContext {
   price: number;
   bonus?: number;
   stock: StockInfo[];
+  specs: ProductSpecs[];
 }
 
 @Injectable({ providedIn: 'root' })

@@ -1,0 +1,27 @@
+$color-grey: #B3B7BC;
+
+.product-info-tabs {
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+    align-items: center;
+  }
+
+  &__coll {
+    flex: 1;
+    &_label {
+      color: $color-grey;
+    }
+
+    &_value {
+      font-weight: 500;
+    }
+  }
+}

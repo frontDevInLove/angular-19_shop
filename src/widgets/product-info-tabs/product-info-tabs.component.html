@@ -1,4 +1,4 @@
-<div class="product-info-tabs">
+<div class="product-info-tabs" *ngIf="isReady()">
   <drag-scroll>
     <div class="product-info-tabs__tabs">
       @for (tab of tabs; track tab.key) {

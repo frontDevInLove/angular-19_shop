@@ -1,7 +1,8 @@
-import { Component, Type } from '@angular/core';
+import { Component, computed, inject, Type } from '@angular/core';
 import { NgComponentOutlet, NgIf } from '@angular/common';
 import { ProductInfoCharacteristicComponent } from '@widgets/product-info-tabs/product-info-characteristic/product-info-characteristic.component';
 import { DragScrollComponent, DragScrollItemDirective } from 'ngx-drag-scroll';
+import { ProductContextService } from '@pages/product-page/model/product-context.service';
 
 interface ProductTab {
   key: string;
@@ -44,4 +45,8 @@ export class ProductInfoTabsComponent {
   ];
 
   public activeTab = this.tabs[0].key;
+
+  private context = inject(ProductContextService);
+
+  readonly isReady = computed(() => !!this.context.product());
 }
