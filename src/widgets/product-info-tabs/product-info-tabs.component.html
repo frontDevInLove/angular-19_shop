@@ -1,0 +1,27 @@
+<div class="product-info-tabs">
+  <div class="product-info-tabs__tabs">
+    @for (tab of tabs; track tab.key) {
+      <div
+        (click)="activeTab = tab.key"
+        [class.product-info-tabs__tab_active]="activeTab === tab.key"
+        class="product-info-tabs__tab"
+      >
+        {{ tab.label }}
+      </div>
+    }
+  </div>
+
+  <div class="product-info-tabs__content">
+    @for (tab of tabs; track tab.key) {
+      <div [hidden]="activeTab !== tab.key" class="product-info-tabs__panel">
+        <ng-container *ngIf="tab.component; else textTemplate">
+          <ng-container *ngComponentOutlet="tab.component"></ng-container>
+        </ng-container>
+
+        <ng-template #textTemplate>
+          <p>{{ tab.text }}</p>
+        </ng-template>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,44 @@
+// SCSS (product-info-tabs.component.scss)
+@use 'sass:color';
+$color-activeText: #075095;
+$bg-active: #E6ECF1;
+
+.product-info-tabs {
+  padding: 0 16px;
+
+  &__tabs {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    gap: 8px;
+    user-select: none;
+  }
+
+  &__tab {
+    flex: 0 0 auto;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 32px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    background: #f0f0f0;
+
+    &_active {
+      cursor: default;
+      background: $bg-active;
+      color: $color-activeText;
+    }
+
+    &:hover:not(&_active) {
+      background: color.adjust($bg-active, $lightness: -10%);
+    }
+  }
+
+  &__content {
+  }
+
+  &__panel {
+  }
+}

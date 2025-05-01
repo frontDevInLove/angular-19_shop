@@ -3,11 +3,16 @@ import { ProductImagePreviewComponent } from '@widgets/product-image-preview/pro
 import { ActivatedRoute } from '@angular/router';
 import { ProductContextService } from '@pages/product-page/model/product-context.service';
 import { ProductPurchasePanelComponent } from '@widgets/product-purchase-panel/product-purchase-panel.component';
+import { ProductInfoTabsComponent } from '@widgets/product-info-tabs/product-info-tabs.component';
 
 @Component({
   selector: 'app-product-page',
   standalone: true,
-  imports: [ProductImagePreviewComponent, ProductPurchasePanelComponent],
+  imports: [
+    ProductImagePreviewComponent,
+    ProductPurchasePanelComponent,
+    ProductInfoTabsComponent,
+  ],
   templateUrl: './product-page.component.html',
   styleUrl: './product-page.component.scss',
 })
