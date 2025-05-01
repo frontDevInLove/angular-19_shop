@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ProductImagePreviewComponent } from '@widgets/product-image-preview/product-image-preview.component';
 import { ActivatedRoute } from '@angular/router';
 import { ProductContextService } from '@pages/product-page/model/product-context.service';
+import { ProductPurchasePanelComponent } from '@widgets/product-purchase-panel/product-purchase-panel.component';
 
 @Component({
   selector: 'app-product-page',
   standalone: true,
-  imports: [ProductImagePreviewComponent],
+  imports: [ProductImagePreviewComponent, ProductPurchasePanelComponent],
   templateUrl: './product-page.component.html',
   styleUrl: './product-page.component.scss',
 })

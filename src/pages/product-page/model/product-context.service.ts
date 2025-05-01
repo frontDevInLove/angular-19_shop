@@ -1,19 +1,24 @@
 import { Injectable, signal } from '@angular/core';
 import { mockProduct } from '@pages/product-page/model/mocks';
 
+export interface StockInfo {
+  city: string;
+  count: number;
+  deliveryDate: string;
+}
+
 export interface ProductContext {
   id: string;
   images: string[];
   title: string;
+  logo: string;
   article: string;
+  code: string;
   price: number;
   bonus?: number;
-  stock: {
-    city: string;
-    count: number;
-    deliveryDate: string;
-  }[];
+  stock: StockInfo[];
 }
+
 @Injectable({ providedIn: 'root' })
 export class ProductContextService {
   private readonly productSignal = signal<ProductContext | null>(null);

@@ -1,0 +1,37 @@
+@use 'sass:color';
+$color-bg: #075095;
+$color-text: #fff;
+
+.btn{
+  user-select: none;
+  min-width: 140px;
+  box-sizing: border-box;
+  border: 1px solid $color-bg;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 2px 16px;
+  border-radius: 8px;
+  background: $color-bg;
+  color: $color-text;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .2s linear;
+
+  &:hover {
+    background: color.adjust($color-bg, $lightness: 10%);
+  }
+
+  &--toggle{
+    min-width: 147px;
+    background: none;
+    color: $color-bg;
+    cursor: default;
+
+    &:hover{
+      background: none;
+    }
+  }
+}

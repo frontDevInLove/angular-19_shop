@@ -1,0 +1,16 @@
+<div class="btn" *ngIf="!inCart()" (click)="addToCart()">
+  <span>В корзину</span>
+  <app-icon icon="cart-btn.svg" [size]="24" />
+</div>
+
+<div class="btn btn--toggle" *ngIf="inCart()">
+  <span (click)="decrement()" class="pointer">
+    <app-icon icon="minus.svg" [size]="24" />
+  </span>
+
+  <span>{{ quantity() }} шт.</span>
+
+  <span (click)="increment()" class="pointer">
+    <app-icon icon="plus.svg" [size]="24" />
+  </span>
+</div>

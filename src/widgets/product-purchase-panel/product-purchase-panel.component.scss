@@ -1,0 +1,64 @@
+$color-text: #01101E;
+$color-grey: #B3B7BC;
+$color-primary: #50B946;
+$color-border: #E1E5EB;
+
+.purchase-panel {
+  padding: 24px 16px;
+  color: $color-text;
+
+  &__title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__logo {
+    padding: 0;
+    margin: 20px 0 0;
+
+    img{
+      width: 164px;
+      height: 32px;
+    }
+  }
+
+  &__article, &__code {
+    color: $color-grey;
+    margin: 10px 0 0;
+    font-size: 14px;
+
+    span{
+      color: $color-text;
+    }
+  }
+
+  &__price {
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 39px;
+  }
+
+  &__bonus {
+    img{
+      width: 24px;
+      height: 24px;
+    }
+
+    font-size: 12px;
+    font-weight: 700;
+    color: $color-primary;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__row{
+    margin-top: 17px;
+    border-bottom: 1px solid $color-border;
+    padding-bottom: 14px;
+  }
+}

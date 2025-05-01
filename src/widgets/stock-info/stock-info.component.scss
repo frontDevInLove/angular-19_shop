@@ -1,0 +1,31 @@
+$color-grey: #B3B7BC;
+$color-text: #01101E;
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__city{
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+
+    img{
+      margin-left: 11px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.info {
+  color: $color-grey;
+  margin: 10px 0 0;
+  font-size: 14px;
+
+  span{
+    color: $color-text;
+  }
+}

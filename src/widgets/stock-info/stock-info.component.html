@@ -1,0 +1,20 @@
+<div class="row">
+  <span class="row__city">
+    {{ info.city }}
+    <img src="/images/info.png" alt="инфо" />
+  </span>
+
+  <span>
+    <app-cart-btn [limit]="info.count" />
+  </span>
+</div>
+
+<div class="info">
+  В наличии:
+  <span>{{ info.count }} шт.</span>
+</div>
+
+<div class="info">
+  Дата поставки:
+  <span>{{ info.deliveryDate }}</span>
+</div>

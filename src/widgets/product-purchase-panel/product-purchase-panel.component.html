@@ -1,0 +1,40 @@
+<ng-container *ngIf="product() as p; else loading">
+  <div class="purchase-panel">
+    <h2 class="purchase-panel__title">{{ p.title }}</h2>
+
+    <p class="purchase-panel__logo">
+      <img [src]="p.logo" alt="бренд" />
+    </p>
+
+    <p class="purchase-panel__article">
+      Артикул: <span>{{ p.article }}</span>
+    </p>
+
+    <p class="purchase-panel__code">
+      Код поставщика: <span>{{ p.code }}</span>
+    </p>
+
+    <div class="purchase-panel__price">
+      {{ p.price | number: "1.2-2" }}&nbsp;₽
+
+      <span class="purchase-panel__bonus">
+        <img src="/images/coin.png" alt="баллы" />
+        <span>+ {{ p.bonus | number: "1.2-2" }} баллов</span>
+      </span>
+    </div>
+
+    @for (info of p.stock; track info.city) {
+      <div class="purchase-panel__row">
+        <app-stock-info [info]="info" />
+      </div>
+    }
+  </div>
+</ng-container>
+
+<ng-template #loading>
+  <div class="purchase-panel">
+    <app-text-block-skeleton />
+    <app-text-block-skeleton />
+    <app-text-block-skeleton />
+  </div>
+</ng-template>

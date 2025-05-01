@@ -9,20 +9,23 @@ export const mockProduct: ProductContext = {
     '/sliders/img_4.jpeg',
     '/sliders/img_4.jpeg',
   ],
-  title: 'Моторное масло LIQUI MOLY Optimal Synth 5W-40 4 л',
-  article: 'ART-124587',
-  price: 3450,
-  bonus: 210,
+  title:
+    'Ключ комбинированный 27мм (Chrome vanadium) на держателе сатинированный 1/10 (ER-31027) ЭВРИКА',
+  logo: '/images/logo.png',
+  article: 'ФТ-305.174',
+  code: '00000030692',
+  price: 15341,
+  bonus: 20.79,
   stock: [
     {
-      city: 'Ростов',
-      count: 12,
-      deliveryDate: '2025-05-02',
+      city: 'Москва',
+      count: 2,
+      deliveryDate: '22.04.2025',
     },
     {
-      city: 'Москва',
-      count: 5,
-      deliveryDate: '2025-05-03',
+      city: 'Ростов',
+      count: 2,
+      deliveryDate: '29.04.2025',
     },
   ],
 };
