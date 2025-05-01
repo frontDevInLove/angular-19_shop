@@ -8,10 +8,10 @@ $bg-active: #E6ECF1;
 
   &__tabs {
     width: 100%;
-    overflow: hidden;
     display: flex;
     gap: 8px;
     user-select: none;
+    padding-bottom: 12px;
   }
 
   &__tab {

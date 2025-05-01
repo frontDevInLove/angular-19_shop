@@ -20,6 +20,7 @@
     "@fontsource/inter": "^5.2.5",
     "@fontsource/nunito": "^5.2.5",
     "ng-inline-svg-2": "^19.0.0",
+    "ngx-drag-scroll": "^18.0.0",
     "ngx-skeleton-loader": "^11.0.0",
     "normalize.css": "^8.0.1",
     "rxjs": "~7.8.0",

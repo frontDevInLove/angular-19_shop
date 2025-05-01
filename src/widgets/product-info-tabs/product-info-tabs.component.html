@@ -1,15 +1,18 @@
 <div class="product-info-tabs">
-  <div class="product-info-tabs__tabs">
-    @for (tab of tabs; track tab.key) {
-      <div
-        (click)="activeTab = tab.key"
-        [class.product-info-tabs__tab_active]="activeTab === tab.key"
-        class="product-info-tabs__tab"
-      >
-        {{ tab.label }}
-      </div>
-    }
-  </div>
+  <drag-scroll>
+    <div class="product-info-tabs__tabs">
+      @for (tab of tabs; track tab.key) {
+        <div
+          drag-scroll-item
+          (click)="activeTab = tab.key"
+          [class.product-info-tabs__tab_active]="activeTab === tab.key"
+          class="product-info-tabs__tab"
+        >
+          {{ tab.label }}
+        </div>
+      }
+    </div>
+  </drag-scroll>
 
   <div class="product-info-tabs__content">
     @for (tab of tabs; track tab.key) {

@@ -1,6 +1,7 @@
 import { Component, Type } from '@angular/core';
 import { NgComponentOutlet, NgIf } from '@angular/common';
 import { ProductInfoCharacteristicComponent } from '@widgets/product-info-tabs/product-info-characteristic/product-info-characteristic.component';
+import { DragScrollComponent, DragScrollItemDirective } from 'ngx-drag-scroll';
 
 interface ProductTab {
   key: string;
@@ -11,7 +12,12 @@ interface ProductTab {
 
 @Component({
   selector: 'app-product-info-tabs',
-  imports: [NgIf, NgComponentOutlet],
+  imports: [
+    NgIf,
+    NgComponentOutlet,
+    DragScrollComponent,
+    DragScrollItemDirective,
+  ],
   standalone: true,
   templateUrl: './product-info-tabs.component.html',
   styleUrl: './product-info-tabs.component.scss',
